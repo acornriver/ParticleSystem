@@ -8,7 +8,7 @@ function setup() {
   createCanvas(720, 400);
   // system = new ParticleSystem(createVector(width / 2, 50));
   g = createVector(0, 0.05);
-  w = createVector(0.03, -0.08);
+  w = createVector(0.09, -0.09);
 }
 
 function draw() {
