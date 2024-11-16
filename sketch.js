@@ -8,7 +8,7 @@ function setup() {
   createCanvas(720, 400);
   // system = new ParticleSystem(createVector(width / 2, 50));
   g = createVector(0, 0.05);
-  w = createVector(0.03, -0.03);
+  w = createVector(0.03, -0.08);
 }
 
 function draw() {
@@ -17,8 +17,11 @@ function draw() {
   for(let s of systems){
     s.addParticle();
     s.applyGravity(g);
-    s.applyForce(w);
+    // s.applyForce(w);
     s.run();
+    if(mouseIsPressed){
+      s.applyForce(w);
+    }
   }
 
 }
